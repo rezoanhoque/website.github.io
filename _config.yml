@@ -12,7 +12,7 @@ title                    : "MOHAMMAD REZOANUL HOQUE"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description"
-url                      : https://mywebsite.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://hironmoy12.github.io/mywebsite.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "hironmoy12/mywebsite.github.io"
 
