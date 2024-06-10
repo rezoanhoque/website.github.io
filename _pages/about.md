@@ -8,7 +8,7 @@ redirect_from:
 ---
 
  ABOUT ME
- ________________________________________________________________
+
 
  Dedicated and skilled researcher with more than 5 years of experience in data analysis, econometric
  modeling, and quantitative research methods. Proficient in economics, statistics, and econometrics,
@@ -19,7 +19,7 @@ tensive expertise in analyzing population and economic census data, survey data 
  development.
 
  TECHNICAL SKILLS
- ________________________________________________________________
+
 
  Data management, AI, data mining, data science research methods, pattern and trend identification,
  visualisation of data insights.
@@ -32,7 +32,7 @@ tensive expertise in analyzing population and economic census data, survey data 
  GRE Score:    Q:168, V:163, 331/340 
 
  EDUCATION
-________________________________________________________________
+
 
   Texas Tech University:   2023-2027
  PhD Student in Economics
@@ -47,7 +47,7 @@ ________________________________________________________________
  BSc in Economics
  
 HONORS AND AWARDS
-________________________________________________________________
+
 
 1st prize in USDA AMS-AAEA GSS Data Visualization Challenge (2023)
  Distinguished Graduate Student Assistantship Recipient of Texas Tech RESEARCH EXPERIENCE (2022)
