@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-[Download CV Here](https://github.com/hironmoy12/mywebsite.github.io/blob/master/files/CV Mohammad Rezoanul Hoque 2024.pdf)
+[Download CV Here](https://github.com/hironmoy12/mywebsite.github.io/blob/master/files/CV.pdf)
 
 <!-- Education
 ======
