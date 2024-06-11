@@ -52,6 +52,14 @@ HONORS AND AWARDS
 1st prize in USDA AMS-AAEA GSS Data Visualization Challenge (2023)
  Distinguished Graduate Student Assistantship Recipient of Texas Tech RESEARCH EXPERIENCE (2022)
 
+  LANGUAGE SKILLS
+  
+  Fluent in English, Bengali, French (Basic) and Malay.
+
+ PROFESSIONAL AFFILIATIONS
+
+ AEA, AAEA, SAEA
+
  
 
 
