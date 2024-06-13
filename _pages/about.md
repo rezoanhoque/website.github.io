@@ -18,7 +18,7 @@ tensive expertise in analyzing population and economic census data, survey data 
  address pressing challenges in food and resource economics, environmental economics, and sustainable
  development.
 
- TECHNICAL SKILLS
+ <b>TECHNICAL SKILLS</b>
 
 
  Data management, AI, data mining, data science research methods, pattern and trend identification,
