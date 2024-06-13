@@ -31,7 +31,7 @@ tensive expertise in analyzing population and economic census data, survey data 
  Survey:       CAPI, Qualtrics, ODK
  GRE Score:    Q:168, V:163, 331/340 
 
- EDUCATION
+ <b>EDUCATION</b>
 
 
   Texas Tech University:   2023-2027
@@ -46,17 +46,17 @@ tensive expertise in analyzing population and economic census data, survey data 
  Universiti Islam Antarabangsa Malaysia:  2014
  BSc in Economics
  
-HONORS AND AWARDS
+<b>HONORS AND AWARDS</b>
 
 
 1st prize in USDA AMS-AAEA GSS Data Visualization Challenge (2023)
  Distinguished Graduate Student Assistantship Recipient of Texas Tech RESEARCH EXPERIENCE (2022)
 
-  LANGUAGE SKILLS
+ <b> LANGUAGE SKILL</b>
   
   Fluent in English, Bengali, French (Basic) and Malay.
 
- PROFESSIONAL AFFILIATIONS
+ <b>PROFESSIONAL AFFILIATIONS</b>
 
  AEA, AAEA, SAEA
 
