@@ -358,11 +358,11 @@ button.hidden{
   display: block !important;
   visibility: visible !important;
 }
-ul.hidden-links.hidden {
-  display: block;
-  visibility: visible;
-}
-ul.visible-links{
-  display: block;
+// ul.hidden-links.hidden {
+//   display: block;
+//   visibility: visible;
+// }
+.greedy-nav .visible-links {
+  display: none !important;
 }
 }
