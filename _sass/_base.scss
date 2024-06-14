@@ -323,3 +323,13 @@ article.page {
 .page__content p:first-child{
   font-weight: bold;
 }
+
+@media(max-width:900px){
+  .author__avatar {
+    width: 77%;
+}
+.sidebar.sticky div:first-child{
+  display: flex;
+  align-items: center;
+}
+}
