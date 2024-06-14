@@ -326,7 +326,7 @@ article.page {
 
 @media(max-width:900px){
   .author__avatar {
-    width: 77%;
+    width: 77% !important;
 }
 .sidebar.sticky div:first-child{
   display: flex;
