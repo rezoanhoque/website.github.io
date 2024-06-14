@@ -112,3 +112,14 @@ $breakpoint: () !default;
     @content;
   }
 }
+
+
+@media(max-width:900px){
+  .author__avatar {
+    width: 77%;
+}
+.sidebar.sticky div:first-child{
+  display: flex;
+  align-items: center;
+}
+}
