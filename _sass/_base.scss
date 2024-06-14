@@ -333,3 +333,19 @@ article.page {
   align-items: center;
 }
 }
+
+@media(max-width:480px){
+  .sidebar.sticky div:first-child {
+    flex-direction: column;
+    gap: 10px;
+}
+.author__avatar {
+  width: 72% !important;
+}
+.author__avatar img {
+ margin: 0 !important;
+}
+.author__content {
+ padding: 0 !important;
+}
+}
