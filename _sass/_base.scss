@@ -14,7 +14,7 @@ body {
   color: #000;
   font-family: $global-font-family;
   line-height: 1.5;
-background: #bdb76b;
+background: #fff;
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
     overflow: hidden;
@@ -315,7 +315,7 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
 }
 
 html.js {
-  background: darkkhaki;
+  background: #fff;
 }
 article.page {
   width: 970px;
