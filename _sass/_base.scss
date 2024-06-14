@@ -371,4 +371,7 @@ button.hidden{
 h1.page__title {
 line-height: normal !important;
 }
+.page .page__inner-wrap .page__content, .page .page__inner-wrap .page__meta, .page .page__inner-wrap .comment__date, .page .page__inner-wrap .page__share {
+  width: 82% !important;
+}
 }
