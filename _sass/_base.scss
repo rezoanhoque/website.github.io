@@ -351,4 +351,12 @@ article.page {
 .author__urls-wrapper{
   margin-right: auto;
 }
+button.hidden{
+  display: block !important;
+  visibility: visible !important;
+}
+ul.hidden-links.hidden {
+  display: block;
+  visibility: visible;
+}
 }
