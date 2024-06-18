@@ -37,7 +37,7 @@ jobs:
         run: bundle install --path vendor/bundle --jobs 4 --retry 3
 
       - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
 
@@ -45,7 +45,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: jekyll-site
-          path: ./docs/_site  # Adjust path if needed
+          path: _site  # Adjust path if needed
 
   # Deployment job
   deploy:
@@ -61,7 +61,7 @@ jobs:
           name: jekyll-site
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          artifact_path: ./docs/_site  # Adjust path if needed
+          publish_dir: _site  # Adjust path if needed
