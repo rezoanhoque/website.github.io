@@ -7,81 +7,78 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "en-US"
-title                    : "MOHAMMAD REZOANUL HOQUE"
-title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
-url                      : "https://github.com/rezoanhoque/website.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "/rezoanhoque/website.github.io"
+locale: "en-US"
+title: "MOHAMMAD REZOANUL HOQUE"
+title_separator: "-"
+name: "MOHAMMAD REZOANUL HOQUE"
+description: "Skilled researcher with more than 5 years of experience in data analysis, econometric modeling, and quantitative research methods. Proficient in economics, statistics, and econometrics, with a proven ability to synthesize and derive insights from complex quantitative information."
+url: "https://github.com/rezoanhoque/website.github.io"
+baseurl: ""
+repository: "rezoanhoque/website.github.io"
 
 # Site Author
 author:
-  avatar           : "profile2.png"
-  name             : "MOHAMMAD REZOANUL HOQUE"
-  bio              : "Skilled researcher with more than 5 years of experience in data analysis, econometric modeling, and quantitative research methods. Proficient in economics, statistics, and econometrics, with a proven ability to synthesize and derive insights from complex quantitative information."
-  location         : "Texas, USA"
-  employer         : "Texas Tech University"
-  email            : "rezoan.iium@gmail.com" 
-  googlescholar    : "https://scholar.google.com/citations?user=I0jIEoQAAAAJ&hl=en"
-  orcid            : "https://orcid.org/0000-0002-7070-712X"
-  linkedin         : "https://www.linkedin.com/in/rezoanul/"
-  github           : "academicpages"
+  avatar: "profile2.png"
+  name: "MOHAMMAD REZOANUL HOQUE"
+  bio: "Skilled researcher with more than 5 years of experience in data analysis, econometric modeling, and quantitative research methods. Proficient in economics, statistics, and econometrics, with a proven ability to synthesize and derive insights from complex quantitative information."
+  location: "Texas, USA"
+  employer: "Texas Tech University"
+  email: "rezoan.iium@gmail.com"
+  googlescholar: "https://scholar.google.com/citations?user=I0jIEoQAAAAJ&hl=en"
+  orcid: "https://orcid.org/0000-0002-7070-712X"
+  linkedin: "https://www.linkedin.com/in/rezoanul/"
+  github: "academicpages"
 
 # Site Settings
-teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-breadcrumbs              : false # true, false (default)
-words_per_minute         : 160
-future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false #change to true to add link to talkmap on talks page
+teaser: ""
+breadcrumbs: false
+words_per_minute: 160
+future: true
+read_more: "disabled"
+talkmap_link: false
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider: false
 staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
+  allowedFields: ['name', 'email', 'url', 'message']
+  branch: "gh-pages"
+  commitMessage: "New comment."
+  filename: comment-{@timestamp}
+  format: "yml"
+  moderation: true
+  path: "_data/comments/{options.slug}"
+  requiredFields: ['name', 'email', 'message']
   transforms:
-    email                : "md5"
+    email: "md5"
   generatedFields:
     date:
-      type               : "date"
+      type: "date"
       options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+        format: "iso8601"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
-  path                   :  # blank (default) uses feed.xml
+  hide: false
+  path: ""
 
 # SEO Related
-google_site_verification :
-bing_site_verification   :
-alexa_site_verification  :
-yandex_site_verification :
+google_site_verification: ""
+bing_site_verification: ""
+alexa_site_verification: ""
+yandex_site_verification: ""
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username: ""
 facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+  username: ""
+  app_id: ""
+  publisher: ""
+og_image: ""
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type: ""
+  name: ""
 
 # Analytics
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
-  google:
-    tracking_id          :
+  provider: false
 
 # Reading Files
 include:
@@ -192,7 +189,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comment: true
+      comments: true
   - scope:
       path: ""
       type: talks
@@ -204,11 +201,11 @@ defaults:
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed
 
 # Outputting
 permalink: /:categories/:title/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Los_Angeles
 
 # Plugins
 plugins:
