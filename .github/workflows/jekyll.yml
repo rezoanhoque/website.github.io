@@ -3,8 +3,8 @@ name: Deploy Jekyll site to GitHub Pages
 on:
   push:
     branches:
-      - master  # Deploy on pushes to the master branch
-  workflow_dispatch:  # Allow manual triggering from Actions tab
+      - master
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -12,10 +12,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2  # Checkout the repository to the runner
+        uses: actions/checkout@v2
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1  # Setup Ruby environment
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'  # Adjust to your Ruby version
 
       - name: Install dependencies
         run: |
@@ -23,11 +25,11 @@ jobs:
           bundle install
 
       - name: Build Jekyll site
-        run: bundle exec jekyll build --destination ./_site  # Build Jekyll site into _site directory
+        run: bundle exec jekyll build --destination ./_site
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3  # Use the peaceiris/actions-gh-pages action
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site  # Directory to deploy
-          force_orphan: true  # Publishes the site as a fresh start
+          publish_dir: ./_site
+          force_orphan: true
