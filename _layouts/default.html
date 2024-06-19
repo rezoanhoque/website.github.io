@@ -1,31 +1,47 @@
 ---
 layout: compress
 ---
-
 {% include base_path %}
 
 <!doctype html>
 <html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
+<head>
+  {% include head.html %}
+  {% include head/custom.html %}
+  {% if page.title %}
+    <title>{{ page.title | escape }}</title>
+  {% else %}
+    <title>{{ site.title | escape }}</title>
+  {% endif %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="{{ page.url | prepend: site.url }}">
+  <meta property="og:url" content="{{ page.url | prepend: site.url }}">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 30 }}{% else %}{{ site.description | strip_html | truncatewords: 30 }}{% endif %}">
+  <!-- Add more meta tags as needed for SEO -->
 
-  <body>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="{{ 'assets/css/style.css' | relative_url }}">
+  <!-- Add additional stylesheets -->
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+  <!-- Scripts -->
+  {% include scripts.html %}
+</head>
 
+<body>
+  {% include browser-upgrade.html %}
+  {% include masthead.html %}
+
+  <main class="page__content">
     {{ content }}
+  </main>
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
+  <footer class="page__footer">
+    {% include footer/custom.html %}
+    {% include footer.html %}
+  </footer>
 
-    {% include scripts.html %}
+  <!-- Add additional content or scripts as needed -->
 
-  </body>
+</body>
 </html>
