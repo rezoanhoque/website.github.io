@@ -10,7 +10,7 @@ repository: "rezoanhoque/website.github.io"
 
 # Site Author
 author:
-  avatar: "profile2.png"
+  avatar: "/images/profile2.png"
   name: "MOHAMMAD REZOANUL HOQUE"
   bio: "Skilled researcher with more than 5 years of experience in data analysis, econometric modeling, and quantitative research methods. Proficient in economics, statistics, and econometrics, with a proven ability to synthesize and derive insights from complex quantitative information."
   location: "Texas, USA"
