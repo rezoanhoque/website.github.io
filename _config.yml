@@ -6,7 +6,7 @@ name: "MOHAMMAD REZOANUL HOQUE"
 description: "Skilled researcher with more than 5 years of experience in data analysis, econometric modeling, and quantitative research methods. Proficient in economics, statistics, and econometrics, with a proven ability to synthesize and derive insights from complex quantitative information."
 url: "https://rezoanhoque.github.io/website.github.io/"
 baseurl: ""
-repository: "https://github.com/rezoanhoque/website.github.io"
+repository: rezoanhoque/website
 
 # Site Author
 author:
@@ -19,7 +19,7 @@ author:
   googlescholar: "https://scholar.google.com/citations?user=I0jIEoQAAAAJ&hl=en"
   orcid: "https://orcid.org/0000-0002-7070-712X"
   linkedin: "https://www.linkedin.com/in/rezoanul/"
-  github: "academicpages"
+  github: "rezoanhoque"  # Updated GitHub username
 
 # Site Settings
 teaser: ""
@@ -58,9 +58,9 @@ yandex_site_verification: ""
 
 # Social Sharing
 twitter:
-  username: ""
+  username: ""  # Update with your Twitter username if desired
 facebook:
-  username: ""
+  username: ""  # Update with your Facebook username if desired
   app_id: ""
   publisher: ""
 og_image: ""
@@ -70,7 +70,7 @@ social:
 
 # Analytics
 analytics:
-  provider: false
+  provider: false  # Set to true if using analytics
 
 # Reading Files
 include:
