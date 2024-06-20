@@ -5,7 +5,7 @@ title_separator: "-"
 name: "MOHAMMAD REZOANUL HOQUE"
 description: "Skilled researcher with more than 5 years of experience in data analysis, econometric modeling, and quantitative research methods. Proficient in economics, statistics, and econometrics, with a proven ability to synthesize and derive insights from complex quantitative information."
 url: "https://rezoanhoque.github.io/website.github.io/"
-baseurl: ""
+baseurl: "/website.github.io"
 repository: "rezoanhoque/website"
 
 # Site Author
