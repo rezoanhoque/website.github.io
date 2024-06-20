@@ -8,11 +8,13 @@ layout: compress
 <head>
   {% include head.html %}
   {% include head/custom.html %}
+  
   {% if page.title %}
     <title>{{ page.title | escape }}</title>
   {% else %}
     <title>{{ site.title | escape }}</title>
   {% endif %}
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="canonical" href="{{ page.url | prepend: site.url }}">

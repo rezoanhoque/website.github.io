@@ -1,45 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet debug page</title>
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-    	<title>Leaflet debug page</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.css" />
 
-    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.css" />
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.js"></script>
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<link rel="stylesheet" href="leaflet_dist/screen.css" />
+    <!-- Leaflet JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.js"></script>
 
-    	<link rel="stylesheet" href="leaflet_dist/MarkerCluster.css" />
-    	<link rel="stylesheet" href="leaflet_dist/MarkerCluster.Default.css" />
-    	<script src="leaflet_dist/leaflet.markercluster-src.js"></script>
-    	<script src="org-locations.js"></script>
+    <!-- Viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    </head>
-    <body>
+    <!-- Custom CSS for Leaflet clustering -->
+    <link rel="stylesheet" href="leaflet_dist/screen.css" />
 
-    	<div id="map"></div>
-    	<span>Mouse over a cluster to see the bounds of its children and click a cluster to zoom to those bounds</span>
-    	<script type="text/javascript">
-    		var tiles = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
-              maxZoom: 18,
-              attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
-                    }),
-    			latlng = L.latLng(30, 10);
-    		var map = L.map('map', {center: latlng, zoom: 0.7, layers: [tiles]});
-    		var markers = L.markerClusterGroup({
-    			showCoverageOnHover: false,
-    			maxClusterRadius: 80
-    			});
-    		for (var i = 0; i < addressPoints.length; i++) {
-    			var a = addressPoints[i];
-    			var title = a[0];
-    			var marker = L.marker(new L.LatLng(a[1], a[2]), { title: title });
-    			marker.bindPopup(title);
-    			markers.addLayer(marker);
-    		}
-    		map.addLayer(markers);
-    		map.zoomIn();
-    	</script>
-    </body>
-    </html>
-    
+    <!-- Leaflet Marker Cluster CSS -->
+    <link rel="stylesheet" href="leaflet_dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="leaflet_dist/MarkerCluster.Default.css" />
+
+    <!-- Leaflet Marker Cluster JavaScript -->
+    <script src="leaflet_dist/leaflet.markercluster-src.js"></script>
+
+    <!-- External JavaScript file with marker data -->
+    <script src="org-locations.js"></script>
+
+</head>
+<body>
+
+    <!-- Map container -->
+    <div id="map"></div>
+
+    <!-- Information for users -->
+    <span>Mouse over a cluster to see the bounds of its children and click a cluster to zoom to those bounds</span>
+
+    <!-- JavaScript code for Leaflet map initialization -->
+    <script type="text/javascript">
+        // Define the tile layer
+        var tiles = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+            maxZoom: 18,
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+        });
+
+        // Initial center coordinates and zoom level
+        var latlng = L.latLng(30, 10);
+        var map = L.map('map', {center: latlng, zoom: 0.7, layers: [tiles]});
+
+        // Create a marker cluster group
+        var markers = L.markerClusterGroup({
+            showCoverageOnHover: false,  // Disable coverage display on hover
+            maxClusterRadius: 80         // Adjust the max cluster radius
+        });
+
+        // Loop through addressPoints from org-locations.js to add markers
+        for (var i = 0; i < addressPoints.length; i++) {
+            var a = addressPoints[i];
+            var title = a[0];
+            var marker = L.marker(new L.LatLng(a[1], a[2]), { title: title });
+            marker.bindPopup(title);  // Bind a popup with marker title
+            markers.addLayer(marker); // Add marker to cluster group
+        }
+
+        // Add marker cluster group to the map
+        map.addLayer(markers);
+
+        // Optionally zoom the map to fit all markers
+        map.fitBounds(markers.getBounds());
+
+    </script>
+
+</body>
+</html>
