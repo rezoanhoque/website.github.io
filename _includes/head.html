@@ -1,24 +1,36 @@
+{% comment %}
+  This template includes essential HTML meta tags, SEO settings, and CSS imports.
+  Adjust paths and variables as needed for your specific setup.
+{% endcomment %}
+
 {% include base_path %}
 
-<meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta http-equiv="cleartype" content="on">
 
-{% include seo.html %}
+  {% include seo.html %}
 
-<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+  <title>{{ site.title }}</title>
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Dynamically set Atom feed URL -->
+  <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
+  <!-- JavaScript detection -->
+  <script>
+    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js';
+  </script>
 
-<!-- For all browsers -->
-<link rel="stylesheet" href="../assets/css/main.css">
-<link rel="stylesheet" href=".././_sass/_base.scss">
-
-
-
-<meta http-equiv="cleartype" content="on">
+  <!-- CSS stylesheets -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/_sass/_base.scss">
+</head>
+<body>
+  <!-- Your HTML content here -->
+</body>
+</html>
