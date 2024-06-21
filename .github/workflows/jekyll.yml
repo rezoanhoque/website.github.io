@@ -2,12 +2,13 @@ name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches: 
-      - main  # Adjust branch name as per your default branch
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
   workflow_dispatch:
 
 permissions:
-  contents: write  # Ensure contents permission is set to write
+  contents: write
   pages: write
   id-token: write
 
@@ -17,25 +18,50 @@ concurrency:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3  # Updated to the latest version
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install npm dependencies
+        run: npm ci
+      
+      - name: Build JavaScript assets
+        run: npm run build --if-present
+      
+      - name: Run tests
+        run: npm test
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'  # Specify your desired Ruby version
           bundler-cache: true
+
       - name: Install Jekyll and dependencies
         run: |
           gem install bundler jekyll
           bundle install
+
       - name: Build Jekyll site
         run: bundle exec jekyll build --baseurl "/website.github.io"
         env:
           JEKYLL_ENV: production
+
       - name: Archive artifacts
-        uses: actions/upload-artifact@v4  # Updated to the latest version
+        uses: actions/upload-artifact@v4  # Use the latest version
         with:
           name: jekyll-site
           path: _site  # Path to your Jekyll build output directory
@@ -45,11 +71,13 @@ jobs:
     needs: build
     steps:
       - name: Download artifacts
-        uses: actions/download-artifact@v3  # Updated to the latest version
+        uses: actions/download-artifact@v3  # Use the latest version
         with:
           name: jekyll-site
+          path: _site  # Path to your Jekyll build output directory
+
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4  # Updated to the latest version
+        uses: peaceiris/actions-gh-pages@v4  # Use the latest version
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
