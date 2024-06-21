@@ -11210,3 +11210,7 @@ img.mfp-img{
     }
 }
 
+ul.hidden-links.hidden {
+    display: block;
+    visibility: visible;
+}
