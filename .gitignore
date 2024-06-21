@@ -1,12 +1,22 @@
-# Ignore the contents of the _site directory
+# Ignore generated files and directories
 _site/
-
-# Ignore the directory for local files during development
 local/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
 
-# Ignore the Gemfile that is generated
+# Ignore Gemfile.lock and npm's package lock file
 Gemfile.lock
-
-# Ingore files created by npm
-node_modules
 package-lock.json
+
+# Ignore IDE and editor-specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
