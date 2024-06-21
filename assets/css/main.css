@@ -11209,8 +11209,9 @@ img.mfp-img{
         display:none
     }
 }
-
-ul.hidden-links.hidden {
-    display: block;
-    visibility: visible;
+@media (max-width: 480px) {
+    ul.hidden-links.hidden {
+        display: block;
+        visibility: visible;
+    }
 }
