@@ -1331,7 +1331,8 @@ tr,td,th{
     margin:0 1rem;
     padding:0.5rem 0;
     color:#000;
-    text-decoration:none
+    text-decoration:none;
+    font-size: 18px;
 }
 .greedy-nav a:hover{
     color:#5c6266
