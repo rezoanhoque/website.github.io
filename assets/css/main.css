@@ -2468,8 +2468,8 @@ input[type="file"]:focus,input[type="radio"]:focus,input[type="checkbox"]:focus,
     text-transform:uppercase
 }
 .archive{
-    margin-bottom:2em;
-    width:960px !important
+    margin-bottom: 2em;
+    width: 480px !important;
 }
 @media (min-width: 48em){
     .archive{
