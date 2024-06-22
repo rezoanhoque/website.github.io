@@ -7,9 +7,8 @@ yarn-debug.log*
 yarn-error.log*
 .env
 
-# Ignore Gemfile.lock and npm's package lock file
+# Ignore Gemfile.lock
 Gemfile.lock
-package-lock.json
 
 # Ignore IDE and editor-specific files
 .vscode/
