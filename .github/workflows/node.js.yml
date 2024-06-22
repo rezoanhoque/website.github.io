@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [14.x, 16.x, 20.x]  # Updated to include Node.js 20
 
     steps:
       - name: Checkout code
